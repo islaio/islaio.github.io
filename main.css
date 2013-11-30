@@ -1,0 +1,95 @@
+body { 
+  padding-bottom: 0px;
+}
+footer {
+  background-color: #000;
+  margin 0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+  color: #fff;
+}
+footer a:link {color:#FFF;}      /* unvisited link */
+footer a:visited {color:#FFF;}  /* visited link */
+footer a:hover {color:#FFF;}  /* mouse over link */
+footer a:active {color:#FFF;}  /* selected link */
+.google-map {
+  background-color: #fff;
+}
+.google-map a {
+  color: #fff;
+}
+
+.google-map a:link {color:#FFF;}      /* unvisited link */
+.google-map a:visited {color:#FFF;}  /* visited link */
+.google-map a:hover {color:#FFF;}  /* mouse over link */
+.google-map a:active {color:#FFF;}  /* selected link */
+
+.title-isla {
+
+  font-family: 'Poiret One', cursive;
+  color:white;
+  font-size:48px;
+}
+  
+.logo-isla { 
+  background: url('img/logos/isla2.png') no-repeat top left #000 ;
+  background-size: 50px 50px;
+  background-position: 20px 0px;
+  margin-left:30px;
+  position: absolute;
+  top: 0px;
+  z-index:100;
+  padding: 0px 15px 0px 15px;
+  margin-left: 70px;
+  height:50px;
+}
+
+.logo-isla .title-isla {
+  padding-left:70px;
+  position: relative;
+  z-index:99;
+
+  top:-10px;
+}
+.navbar-brand img { width: 200px;  }
+.navbar { 
+  background-position: 10px 10px;
+
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+.navbar-wrapper {
+  margin-top:0px;
+}
+.logos-stores li {  display:inline; margin-right: 20px;}
+.navbar {
+}
+
+.social-icons {
+  margin-top:40px;
+  margin-bottom:35px;
+}
+
+.social li { 
+  display: inline-block; 
+  margin: 0px 5px 5px 5px;
+  padding-bottom: 0px;
+}
+
+.social li a { 
+  display: block; 
+  width: 32px; 
+  height: 32px; 
+  position: relative; 
+}
+ 
+ 
+li.twitter { background-image: url("/img/icons/twitter.png"); }
+li.linkedin { background-image: url("/img/icons/linkedin.png"); } 
+li.google { background-image: url("/img/icons/google.png"); }
+li.skype { background-image: url("/img/icons/skype.png"); }
+li.wordpress{ background-image: url("/img/icons/wordpress.png"); }
+
+.google-map {
+  margin-bottom: -10px;  
+  margin-top: 0px;
+}
