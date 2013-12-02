@@ -10,7 +10,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <title>isla.io open source social games</title>
-<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"/>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="navbar-wrapper">
-      <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -93,7 +93,7 @@
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="img/logos/lab.png" width="120px" alt="Generic placeholder image">
+          <img class="img-circle" src="img/logos/games.png" width="120px" alt="Generic placeholder image">
           <h2>Games</h2>
           <p>Achieving a real portability between platforms is still a challenge and we are working on it.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -157,7 +157,7 @@
         <div class="pull-right social-icons">
              <ul class="social">
               <li class="twitter">   <a href="http://www.twitter.com/islaio"></a> </li>
-              <li class="linkedin">  <a href="http://www.linkedin.com/islaio"></a> </li>
+              <li class="linkedin">  <a href="http://www.linkedin.com/company/isla-io"></a> </li>
               <li class="google">    <a href=""></a> </li> 
               <li class="skype">     <a href=""></a> </li> 
               <!-- <li class="wordpress"> <a href="http://github.com/islaio"></a> </li> -->
@@ -165,6 +165,7 @@
         </div>
       </div>
      </footer>
+
   </body>
 
     <!-- Bootstrap core JavaScript
@@ -172,8 +173,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
-
-    <script src=""></script>
     <script src="assets/js/bootstrap/dist/ui-bootstrap-tpls-0.7.0-SNAPSHOT.js"></script>
     <script src="bower_components/bootstrap/docs-assets/js/holder.js"></script>
     <script>
@@ -197,23 +196,23 @@
           });
         };
       }
-      
+          
 
-//Jquery ScrollTo
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
+    //Jquery ScrollTo
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
 
 
 

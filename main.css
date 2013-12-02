@@ -2,6 +2,8 @@ body {
   padding-bottom: 0px;
 }
 footer {
+  background: url('img/footer.png') no-repeat ;
+  background-position: -200px -100px;
   background-color: #000;
   margin 0px 0px 0px 0px;
   padding:0px 0px 0px 0px;
