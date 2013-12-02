@@ -60,7 +60,7 @@
         <carousel interval="myInterval">
 
           <slide ng-repeat="slide in slides" active="slide.active" 
-            ng-style="{'background-image': 'url(' + slide.image + ')'}" >
+            ng-style="{'background-image': 'url(' + slide.image + ')'}" ng-click="open()" >
             <div class="carousel-caption">
               <img ng-src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
               <ul class="logos-stores">
@@ -72,34 +72,10 @@
         </carousel>
       </div>
     </div>
-
-    <!-- Button trigger modal -->
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+  
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
@@ -190,16 +166,24 @@
     <script src="bower_components/bootstrap/docs-assets/js/holder.js"></script>
     <script>
       angular.module('isla', ['ui.bootstrap']);
-      function CarouselDemoCtrl($scope) {
+      function CarouselDemoCtrl($scope, $modal) {
         $scope.myInterval = 5000;
         var slides = $scope.slides = [ 
           { image: 'img/slides/soccer-stadium.jpg', text: 'social cup', logo: 'img/logos/social-cup-1.png' },
           { image: 'img/slides/quest.jpg', text: 'social cup', logo: 'img/logos/quest2.png' },
- //         { image: 'img/slides/quest.jpg', text: 'social cup' }
+           // { image: 'img/slides/quest.jpg', text: 'social cup' }
         ];
+
+        $scope.open = function () {
+          var modalInstance = $modal.open({
+            templateUrl: 'modalXmas.html',
+            controller: function ($scope, $modalInstance, items) {
+            },
+            resolve: {
+                items: function () {}
+            }
+          });
+        };
       }
     </script>
- 
 </html>
-
-
