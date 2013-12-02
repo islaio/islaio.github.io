@@ -59,11 +59,12 @@
     <div ng-controller="CarouselDemoCtrl">
       <div>
         <carousel interval="myInterval">
-        <slide ng-repeat="slide in slides" active="slide.active" style="background: url({{slide.image}}) no-repeat;">
+
+          <slide ng-repeat="slide in slides" active="slide.active" ng-style="{'background-image': 'url(' + slide.image+ ') no-repeat'}" >
             <div class="carousel-caption">
-              <img src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
+              <img ng-src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
               <ul class="logos-stores">
-                <li> <img src="img/logos/applestore.png" width="200px"> </li>
+                <li><img src="img/logos/applestore.png" width="200px"></li>
                 <li><img src="img/logos/android.png" width="170px"></li>
               </ul>
             </div>
@@ -71,36 +72,30 @@
         </carousel>
       </div>
     </div>
-    
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-    
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Launch demo modal
+    </button>
 
-
-
-
-
-
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -188,7 +183,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
     <script src="assets/js/bootstrap/dist/ui-bootstrap-tpls-0.7.0-SNAPSHOT.js"></script>
     <script src="bower_components/bootstrap/docs-assets/js/holder.js"></script>
     <script>
@@ -202,7 +197,6 @@
         ];
       }
     </script>
- 
 </html>
 
 
