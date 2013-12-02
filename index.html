@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="bower_components/bootstrap/docs-assets/ico/favicon.png">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <title>isla.io open source social games</title>
 <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
@@ -22,7 +23,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
+   <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
   </head>
@@ -125,23 +126,32 @@
 
 
       <!-- START THE FEATURETTES -->
-
+<div id="about">
+  
       <hr class="featurette-divider" >
 
       <div class="row featurette" >
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">isla.io <span class="text-muted">a refuge where we are free to play and free to code</span></h2>
+          <p class="lead">
+                  isla.io born on summer of 2013 as the challenge for two old friends of making awesome video games by using web standards.
+                  Our goal is to make people happy playing our games and contribute to development of the Web standards as a platform of making video games by making our work Open Source.
+                  Our first title "Social Cup" is an innovative football manager that combines the taste of the old construction and management simulation video games and the new functionalities that social networks bring to the gaming world.
+                  The release of the Social Cup is planned for Christmas 2013 (iOS, Android).
+          
+          
+          </p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
+</div>
 
       <hr class="featurette-divider">
     </div><!-- /.container -->
 
-    <!-- orange background oange -->
+    <!-- orange background oange 
     <div style="background-color:#f17929">
       <div class="container">
         <div class="row featurette">
@@ -153,15 +163,17 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           </div>
         </div>
-      </div><!-- /.container -->
-    </div>
+      </div>
+    </div>-->
 
+    <div id="contact">
     <div class="google-map"  >
         <iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=L'Illa+de+Benidorm&amp;aq=0&amp;oq=l'i&amp;sll=39.3173,-4.614258&amp;sspn=21.390776,28.125&amp;ie=UTF8&amp;hq=&amp;hnear=Benidorm+Island&amp;ll=38.502658,-0.130195&amp;spn=0.084681,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
         <!--
         <br /><small><a href="https://maps.google.es/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=L'Illa+de+Benidorm&amp;aq=0&amp;oq=l'i&amp;sll=39.3173,-4.614258&amp;sspn=21.390776,28.125&amp;ie=UTF8&amp;hq=&amp;hnear=Benidorm+Island&amp;ll=38.502658,-0.130195&amp;spn=0.084681,0.077162&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
         -->
       </div>
+    </div>
       <!-- /END THE FEATURETTES -->
       <!-- FOOTER -->
     <footer>
@@ -198,8 +210,31 @@
  //         { image: 'img/slides/quest.jpg', text: 'social cup' }
         ];
       }
+      
+
+//Jquery ScrollTo
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
+
+
     </script>
  
+
+
 </html>
 
 
