@@ -53,14 +53,14 @@
           </div>
         </div>
     </div>
-
       
     <!-- Carousel   ================================================== -->
     <div ng-controller="CarouselDemoCtrl">
       <div>
         <carousel interval="myInterval">
 
-          <slide ng-repeat="slide in slides" active="slide.active" ng-style="{'background-image': 'url(' + slide.image+ ') no-repeat'}" >
+          <slide ng-repeat="slide in slides" active="slide.active" 
+            ng-style="{'background-image': 'url(' + slide.image + ')'}" >
             <div class="carousel-caption">
               <img ng-src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
               <ul class="logos-stores">
@@ -172,7 +172,7 @@
               <li class="linkedin">  <a href="http://www.linkedin.com/islaio"></a> </li>
               <li class="google">    <a href=""></a> </li> 
               <li class="skype">     <a href=""></a> </li> 
-              <li class="wordpress"> <a href="http://github.com/islaio"></a> </li>
+              <!-- <li class="wordpress"> <a href="http://github.com/islaio"></a> </li> -->
             </ul>
         </div>
       </div>
