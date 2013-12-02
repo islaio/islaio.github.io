@@ -61,7 +61,7 @@
         <carousel interval="myInterval">
 
           <slide ng-repeat="slide in slides" active="slide.active" 
-            ng-style="{'background-image': 'url(' + slide.image + ')'}" >
+            ng-style="{'background-image': 'url(' + slide.image + ')'}" ng-click="open()" >
             <div class="carousel-caption">
               <img ng-src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
               <ul class="logos-stores">
@@ -73,53 +73,29 @@
         </carousel>
       </div>
     </div>
-
-    <!-- Button trigger modal -->
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+  
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="img/logos/html5.png" width="120px" alt="Generic placeholder image">
-          <h2>HTML 5</h2> <p>We wirte our games in pure javascript, taking advantage of techlogies like Phonegap or Appcelerator, we truly belive in HTML as the next standard in the game industry</p>
+          <h2>HTML 5</h2> <p>We write our games in pure javascript and html5, taking advantage of technologies like Phonegap, Appcelerator and so forth, we truly believe in HTML as the next standard in the game industry</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="img/logos/github.png" alt="Generic placeholder image">
-          <h2>Open</h2>
-          <p>We belive that is posible to sell games in the Apple or Play store while still opening the source. People can buy our games, make in app purchases, while being able to download the code to learn from it, report/fix issues, remix; That's how technology advances quicker..</p>
+          <h2>Open Source</h2>
+          <p>We belive that is posible to sell games in Apple or Play store while still opening the source. People can buy our games, make in app purchases while being able to download the code to learn from it, report/fix issues, remix; That's how technology advances quicker.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="img/logos/lab.png" width="120px" alt="Generic placeholder image">
-          <h2>x + y = ? </h2>
-          <p>Achieve a real portability between platforms is still a challenge</p>
+          <h2>Games</h2>
+          <p>Achieving a real portability between platforms is still a challenge and we are working on it.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
      </div><!-- /.row -->
@@ -202,13 +178,24 @@
     <script src="bower_components/bootstrap/docs-assets/js/holder.js"></script>
     <script>
       angular.module('isla', ['ui.bootstrap']);
-      function CarouselDemoCtrl($scope) {
+      function CarouselDemoCtrl($scope, $modal) {
         $scope.myInterval = 5000;
         var slides = $scope.slides = [ 
           { image: 'img/slides/soccer-stadium.jpg', text: 'social cup', logo: 'img/logos/social-cup-1.png' },
           { image: 'img/slides/quest.jpg', text: 'social cup', logo: 'img/logos/quest2.png' },
- //         { image: 'img/slides/quest.jpg', text: 'social cup' }
+           // { image: 'img/slides/quest.jpg', text: 'social cup' }
         ];
+
+        $scope.open = function () {
+          var modalInstance = $modal.open({
+            templateUrl: 'modalXmas.html',
+            controller: function ($scope, $modalInstance, items) {
+            },
+            resolve: {
+                items: function () {}
+            }
+          });
+        };
       }
       
 
@@ -232,9 +219,4 @@ $(function() {
 
 
     </script>
- 
-
-
 </html>
-
-
