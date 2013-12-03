@@ -99,10 +99,30 @@ li.google { background-image: url("/img/icons/google.png"); }
 li.skype { background-image: url("/img/icons/skype.png"); }
 li.wordpress{ background-image: url("/img/icons/wordpress.png"); }
 
-.google-map {
-  margin-bottom: -10px;  
-  margin-top: 0px;
+div.special > div[class*="col-"] {
+   padding: 0; 
 }
+.details {
+  background-color: black;
+  color: white;
+  height: 550px;
+}
+
+/*
+#contact.container {
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: yellow;
+}
+.google-map {
+  margin-top: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+*/
 
 .featurette-heading {
   margin-top: 0px;
