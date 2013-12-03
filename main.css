@@ -27,32 +27,39 @@ footer a:active {color:#FFF;}  /* selected link */
 .google-map a:active {color:#FFF;}  /* selected link */
 
 .title-isla {
-
   font-family: 'Poiret One', cursive;
-  color:white;
+  color: white;
   font-size:48px;
 }
   
 .logo-isla { 
   background: url('img/logos/isla2.png') no-repeat top left #000 ;
   background-size: 50px 50px;
-  background-position: 20px 0px;
-  margin-left:30px;
-  position: absolute;
-  top: 0px;
-  z-index:100;
-  padding: 0px 15px 0px 15px;
-  margin-left: 70px;
+  background-position: 20px 10px;
+  height:60px;
+}
+.title-isla { 
+  padding-left:80px;
+  padding-right:20px;
+  margin-top:-10px;
+  margin-bottom:20px;
   height:50px;
 }
+/* 
+ z-index:100;
+  padding: 0px 15px 0px 15px;
+  margin-left: 70px;
+*/
 
+/*
 .logo-isla .title-isla {
-  padding-left:70px;
-  position: relative;
   z-index:99;
-
   top:-10px;
 }
+.title-isla {
+  padding-top:-15px;
+}
+*/
 .navbar-brand img { width: 200px;  }
 .navbar { 
   background-position: 10px 10px;
