@@ -98,6 +98,7 @@ li.linkedin { background-image: url("/img/icons/linkedin.png"); }
 li.google { background-image: url("/img/icons/google.png"); }
 li.skype { background-image: url("/img/icons/skype.png"); }
 li.wordpress{ background-image: url("/img/icons/wordpress.png"); }
+li.facebook{ background-image: url("/img/icons/facebook.png"); }
 
 div.special > div[class*="col-"] {
    padding: 0; 

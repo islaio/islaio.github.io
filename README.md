@@ -1,4 +1,3 @@
-islaio.github.io
-================
+#islaio.github.io
 
-Public website of isla.io video game.
+##Public website of isla.io game developers.
