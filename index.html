@@ -65,11 +65,11 @@
             ng-style="{'background-image': 'url(' + slide.image + ')'}" ng-click="open()" >
             <div class="carousel-caption">
               <img ng-src="{{slide.logo}}" width="300px" style="margin-left:32px;"><br>
-              <ul class="logos-stores">
+              <!--<ul class="logos-stores">
 
                 <li><img src="img/logos/applestore.png" width="200px"></li>
                 <li><img src="img/logos/android.png" width="170px"></li>
-              </ul>
+              </ul>-->
             </div>
           </slide>
         </carousel>
@@ -190,7 +190,7 @@
           { image: 'img/slides/soccer-stadium.jpg', text: 'social cup', logo: 'img/logos/social-cup-1.png' }
         ];
 
-        $scope.open = function () {
+        /*$scope.open = function () {
           var modalInstance = $modal.open({
             templateUrl: 'modalXmas.html',
             controller: function ($scope, $modalInstance, items) {
@@ -199,7 +199,7 @@
                 items: function () {}
             }
           });
-        };
+        };*/
       }
           
 
